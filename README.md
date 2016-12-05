@@ -11,10 +11,16 @@ Seuraavaksi tein sen sisälle kansion manifests kansion ja sen sisälle init.pp 
 ## Git Hubin käyttö push & pull
 
 Siirryin polussa Asennus kansioon asti ja annoin komennot sudo git add, sudo git commit, sudo git pupp, sudo git push.
+komennolla <sudo git add . && git commit && git pull && git push> ei tuo sama onnistunut vaan sain virheilmoituksen 
+
+"fatal: Unable to create '/etc/puppet/modules/asennus/.git/index.lock': Permission denied"
+
+joka komennon erikseen syöttämällä sain tuon toimimaan. Tämän jälkeen tiedostot olivat päivittyneet githubiin ja kirjoitin tämän vaiheen vielä markdownilla loppuun
+ja ajoin kommenot vielä kertaalleen uudestaan.
 
 ## yhteenveto
 
 Testasin githubin käyttöä vielä käytännössä ja aloitin linuxin käytön täysin puhtaalta pöydältä ja kopioin githubista repositoryni
- puppettiin modules kansioon puppetin asennuksen jälkeen ja ajoin komennon sudo puppet apply -e "class {asennus:}" ja apache asentui sitten näin hetkessä.
+puppettiin modules kansioon puppetin asennuksen jälkeen ja ajoin komennon sudo puppet apply -e "class {asennus:}" ja apache asentui sitten näin hetkessä.
 
 
